@@ -4,12 +4,12 @@ import { size } from "lodash"
 import { DRFC } from "../../general/types"
 
 interface Props {
-	size: number
+	size?: number
 	direction: "right" | "left" | "down"
 }
 
 const Chevron: DRFC<Props> = (props) => {
-	const { size, direction, ...otherProps } = props
+	const { size = 10, direction, ...otherProps } = props
 	const border = `${size / 4}px solid #666`
 
 	const rotate = direction === "down" ? 135 : direction === "right" ? 45 : -135
