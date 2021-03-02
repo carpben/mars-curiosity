@@ -21,6 +21,7 @@ const WeatherPage: DRFC = (props) => {
 				css={{
 					display: "flex",
 					justifyContent: "space-between",
+					alignItems: "baseline",
 				}}
 			>
 				<H1>Mars Weather</H1>
@@ -30,7 +31,15 @@ const WeatherPage: DRFC = (props) => {
 						alignItems: "center",
 					}}
 				>
-					<div>Sort By</div>
+					<div
+						css={{
+							fontSize: 18,
+							fontWeight: 500,
+							marginRight: 25,
+						}}
+					>
+						Sort By
+					</div>
 					<SelectW
 						handleSelect={(val: string) => setSort(val as WEATHER_METRIC)}
 						selectedVal={queries.sort}

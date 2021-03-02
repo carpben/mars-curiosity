@@ -11,7 +11,7 @@ const WeatherCard: DRFC<SolWeatherData> = (props) => {
 		<div
 			css={{
 				border: "1px solid black",
-				padding: 15,
+				padding: 17,
 			}}
 			{...otherProps}
 		>

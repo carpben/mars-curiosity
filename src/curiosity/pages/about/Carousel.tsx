@@ -35,7 +35,21 @@ const Carousel: DRFC = () => {
 
 	return (
 		<>
-			<div>Curiosity Rover Images from today</div>
+			<h2
+				css={{
+					fontSize: 27,
+					fontWeight: 500,
+				}}
+			>
+				Curiosity rover images{" "}
+				<span
+					css={{
+						color: curiosityStyles.primaryColor,
+					}}
+				>
+					from today
+				</span>
+			</h2>
 
 			{imageList != undefined && (
 				<>
@@ -66,10 +80,11 @@ const Carousel: DRFC = () => {
 							<Button
 								stl={{
 									fontSize: 40,
+									marginLeft: 30,
 								}}
 								handler={() => setPage(page + 1)}
 							>
-								{">"}
+								<Chevron direction="right" size={25} />
 							</Button>
 						)}
 					</div>

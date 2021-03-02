@@ -6,9 +6,9 @@ import { getArr } from "./general/utils/array"
 import { getRandomInRange } from "./general/utils/numbers"
 
 export enum WEATHER_METRIC {
-	TEMP = "AT",
-	WIND = "HWS",
-	PRESSURE = "PRE",
+	Tempreture = "AT",
+	Wind = "HWS",
+	Pressure = "PRE",
 }
 
 interface WeatherStat {

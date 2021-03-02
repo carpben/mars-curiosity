@@ -7,7 +7,7 @@ import H1 from "../../components/H1"
 import { curiosityInfParagraphs } from "../../tools/curiosityInfo"
 import { CuriosityPage } from "../../tools/CuriosityPage"
 import { Photo } from "../../tools/types"
-import aboutImage from "./AboutImage"
+import aboutImage from "./aboutImage"
 import Carousel from "./Carousel"
 
 interface Props {
@@ -19,11 +19,11 @@ const About: DRFC<Props> = (props) => {
 
 	return (
 		<>
-			<H1>About The PRogram</H1>
+			<H1>About The Program</H1>
 			<div
 				css={{
 					display: "flex",
-					marginBottom: 60,
+					marginBottom: 70,
 				}}
 			>
 				{aboutImage}

@@ -6,6 +6,7 @@ const curiosityStyles = {
 		gridTemplateColumns: "repeat(5, 1fr)",
 		gap: 20,
 	}),
+	primaryColor: "#8D6338",
 }
 
 export default curiosityStyles

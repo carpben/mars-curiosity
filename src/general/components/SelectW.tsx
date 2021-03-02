@@ -26,7 +26,6 @@ const SelectW: DRFC<IProps> = (props) => {
 				position: "relative",
 				border: "1px solid #ccc ",
 				display: "flex",
-				padding: 4,
 				borderRadius: 5,
 			}}
 		>
@@ -36,11 +35,13 @@ const SelectW: DRFC<IProps> = (props) => {
 				css={[
 					styleInputNormalize,
 					css`
+						padding: 5px;
 						max-width: 100%;
 						padding-right: 32px;
 						appearance: none;
 						position: relative;
 						z-index: 1;
+						padding-left: 10px;
 					`,
 				]}
 			>
@@ -56,7 +57,8 @@ const SelectW: DRFC<IProps> = (props) => {
 						width: 32,
 						position: "absolute",
 						right: 0,
-						top: 0,
+						bottom: 3,
+						margin: "auto",
 						height: "100%",
 					},
 					styleCenterChild,

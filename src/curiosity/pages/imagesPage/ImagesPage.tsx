@@ -24,7 +24,7 @@ const ImagesPage: DRFC<{}> = (props) => {
 		<div>
 			<H1>Mars Images By Date</H1>
 
-			<DateInput searchByDate={setDate} />
+			<DateInput searchByDate={setDate} initialDate={queries.date} key={queries.date} />
 			<div css={curiosityStyles.imageGrid}>
 				{imageList.map((photo) => (
 					<img

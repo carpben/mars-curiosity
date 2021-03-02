@@ -20,7 +20,7 @@ const initState: WeatherState = {
 	queries: {
 		page: 1,
 		resultsPerPage: 9,
-		sort: WEATHER_METRIC.TEMP,
+		sort: WEATHER_METRIC.Tempreture,
 	},
 }
 

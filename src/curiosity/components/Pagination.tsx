@@ -4,6 +4,7 @@ import { Button } from "../../general/components/Button"
 import { styleCenterChild } from "../../general/styles"
 import { DRFC } from "../../general/types"
 import { getArr } from "../../general/utils/array"
+import curiosityStyles from "../tools/curiosityStyles"
 import Chevron from "./Chevron"
 import PaginationButton from "./PaginationButton"
 
@@ -20,18 +21,21 @@ const Pagination: DRFC<Props> = (props) => {
 			css={{
 				display: "flex",
 				justifyContent: "flex-end",
+				marginTop: 15,
 			}}
 		>
 			<PaginationButton handler={() => setPage(currentPage - 1)} css={styleCenterChild}>
-				<Chevron size={9} direction="left" />
+				<Chevron size={7} direction="left" />
 			</PaginationButton>
 			{getArr(9, (i) => {
 				const page = i + 1
+				const selected = currentPage === page
 				return (
 					<PaginationButton
 						handler={() => setPage(page)}
 						css={{
-							fontWeight: currentPage === page ? 900 : "normal",
+							backgroundColor: selected ? curiosityStyles.primaryColor : "unset",
+							color: selected ? "white" : "#666",
 						}}
 					>
 						{page}
@@ -47,7 +51,7 @@ const Pagination: DRFC<Props> = (props) => {
 				)
 			})}
 			<PaginationButton handler={() => setPage(currentPage + 1)} css={styleCenterChild}>
-				<Chevron size={9} direction="right" />
+				<Chevron size={7} direction="right" />
 			</PaginationButton>
 		</div>
 	)

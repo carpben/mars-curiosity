@@ -18,7 +18,8 @@ const WeatherStat: DRFC<Props> = (props) => {
 			css={{
 				display: "flex",
 				justifyContent: "space-between",
-				marginBottom: 8,
+				marginBottom: 10,
+				fontSize: 18,
 			}}
 		>
 			<div
@@ -28,7 +29,13 @@ const WeatherStat: DRFC<Props> = (props) => {
 			>
 				{label}:
 			</div>
-			<div>{isNumber(val) ? round2Dec(val) : val}</div>
+			<div
+				css={{
+					fontWeight: 500,
+				}}
+			>
+				{isNumber(val) ? round2Dec(val) : val}
+			</div>
 		</div>
 	)
 }

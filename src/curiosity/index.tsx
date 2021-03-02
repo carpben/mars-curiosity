@@ -46,7 +46,7 @@ const CuriosityMars: DRFC = (props) => {
 const verticleMargin = 20
 
 const styleContainer = css({
-	maxWidth: 1200,
+	maxWidth: 1150,
 	margin: "auto",
 	marginTop: verticleMargin,
 	marginBottom: verticleMargin,
