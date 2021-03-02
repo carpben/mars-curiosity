@@ -7,7 +7,7 @@ import H1 from "../../components/H1"
 import { curiosityInfParagraphs } from "../../tools/curiosityInfo"
 import { CuriosityPage } from "../../tools/CuriosityPage"
 import { Photo } from "../../tools/types"
-import aboutImage from "./aboutImage"
+import aboutImage from "./imageAbout"
 import Carousel from "./Carousel"
 
 interface Props {
