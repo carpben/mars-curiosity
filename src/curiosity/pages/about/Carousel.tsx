@@ -5,33 +5,15 @@ import { useImmer } from "use-immer"
 import { useMountEffect } from "../../../general/componentLifecycle"
 import { Button } from "../../../general/components/Button"
 import { DRFC } from "../../../general/types"
+import Chevron from "../../components/Chevron"
+import curiosityStyles from "../../tools/curiosityStyles"
 import { requestCuriosityPhotos } from "../../tools/requests"
-import { ImagesState } from "./About"
-
-const useImageState = () => {
-	const [imagesState, setImagesState] = useImmer<ImagesState>({})
-	useMountEffect(() => {
-		const request = async () => {
-			try {
-				const photos = await requestCuriosityPhotos()
-				console.log(photos)
-				setImagesState((draftSt) => {
-					draftSt.imageList = photos.slice(0, 25)
-				})
-			} catch (e) {
-				setImagesState((draftSt) => {
-					draftSt.failed = true
-				})
-			}
-		}
-		request()
-	})
-
-	return imagesState
-}
+import useSearchPhotos from "../../tools/useSearchPhotos"
 
 const Carousel: DRFC = () => {
-	const { imageList, failed } = useImageState()
+	const {
+		state: { photos: imageList, failed },
+	} = useSearchPhotos()
 	const [page, setPage] = useState(1)
 
 	if (failed) {
@@ -69,16 +51,10 @@ const Carousel: DRFC = () => {
 								}}
 								handler={() => setPage(page - 1)}
 							>
-								{"<"}
+								<Chevron size={15} direction="left" />
 							</Button>
 						)}
-						<div
-							css={{
-								display: "grid",
-								gridTemplateColumns: "repeat(5, 1fr)",
-								gap: 20,
-							}}
-						>
+						<div css={curiosityStyles.imageGrid}>
 							{imagesToShow!.map((photo) => (
 								<img src={photo.img_src} css={{ width: "100%" }} />
 							))}

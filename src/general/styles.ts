@@ -8,3 +8,9 @@ export const styleInputNormalize = css`
 		outline: none;
 	}
 `
+
+export const styleCenterChild = css({
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+})

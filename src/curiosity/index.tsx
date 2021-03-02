@@ -3,6 +3,8 @@ import { css, jsx } from "@emotion/react"
 import { Button } from "../general/components/Button"
 import { DRFC } from "../general/types"
 import About from "./pages/about/About"
+import ImagesPage from "./pages/imagesPage/ImagesPage"
+import WeatherPage from "./pages/weatherPage/WeatherPage"
 import { CuriosityPage } from "./tools/CuriosityPage"
 import { useUrlState } from "./tools/url"
 
@@ -16,8 +18,8 @@ const CuriosityMars: DRFC = (props) => {
 
 	const PAGES = {
 		[CuriosityPage.ABOUT]: <About setPage={setPage} />,
-		[CuriosityPage.IMAGES]: null,
-		[CuriosityPage.WEATHER]: null,
+		[CuriosityPage.IMAGES]: <ImagesPage />,
+		[CuriosityPage.WEATHER]: <WeatherPage />,
 	}
 
 	return (

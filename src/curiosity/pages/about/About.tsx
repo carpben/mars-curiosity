@@ -3,6 +3,7 @@ import { jsx } from "@emotion/react"
 import { useState } from "react"
 import { DRFC } from "../../../general/types"
 import CuriosityButton from "../../components/CuriosityButton"
+import H1 from "../../components/H1"
 import { curiosityInfo } from "../../tools/curiosityInfo"
 import { CuriosityPage } from "../../tools/CuriosityPage"
 import { Photo } from "../../tools/types"
@@ -12,16 +13,12 @@ interface Props {
 	setPage: (page: CuriosityPage) => unknown
 }
 
-export interface ImagesState {
-	imageList?: Photo[]
-	failed?: boolean
-}
-
 const About: DRFC<Props> = (props) => {
 	const { setPage } = props
 
 	return (
 		<>
+			<H1>About The PRogram</H1>
 			<div
 				css={{
 					display: "flex",

@@ -5,7 +5,7 @@ import { DRFC } from "../types"
 
 interface Props {
 	handler: () => unknown
-	stl: Interpolation<Theme>
+	stl?: Interpolation<Theme>
 }
 
 export const Button: DRFC<Props> = (props) => {
