@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/carpben/mars-curiosity/static/css/main.37078850.chunk.css",
+    "main.js": "/carpben/mars-curiosity/static/js/main.c49aba5c.chunk.js",
+    "main.js.map": "/carpben/mars-curiosity/static/js/main.c49aba5c.chunk.js.map",
+    "runtime-main.js": "/carpben/mars-curiosity/static/js/runtime-main.8d2b4ab2.js",
+    "runtime-main.js.map": "/carpben/mars-curiosity/static/js/runtime-main.8d2b4ab2.js.map",
+    "static/js/2.e3830fd8.chunk.js": "/carpben/mars-curiosity/static/js/2.e3830fd8.chunk.js",
+    "static/js/2.e3830fd8.chunk.js.map": "/carpben/mars-curiosity/static/js/2.e3830fd8.chunk.js.map",
+    "static/js/3.a575fc24.chunk.js": "/carpben/mars-curiosity/static/js/3.a575fc24.chunk.js",
+    "static/js/3.a575fc24.chunk.js.map": "/carpben/mars-curiosity/static/js/3.a575fc24.chunk.js.map",
+    "index.html": "/carpben/mars-curiosity/index.html",
+    "static/css/main.37078850.chunk.css.map": "/carpben/mars-curiosity/static/css/main.37078850.chunk.css.map",
+    "static/js/2.e3830fd8.chunk.js.LICENSE.txt": "/carpben/mars-curiosity/static/js/2.e3830fd8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d2b4ab2.js",
+    "static/js/2.e3830fd8.chunk.js",
+    "static/css/main.37078850.chunk.css",
+    "static/js/main.c49aba5c.chunk.js"
+  ]
+}
