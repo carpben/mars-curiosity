@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { jsx } from "@emotion/react"
+import { css, jsx } from "@emotion/react"
 import { Button } from "../../../general/components/Button"
 import { DRFC } from "../../../general/types"
 import { getArr } from "../../../general/utils/array"
@@ -25,21 +25,25 @@ const ImagesPage: DRFC<{}> = (props) => {
 			<H1>Mars Images By Date</H1>
 
 			<DateInput searchByDate={setDate} initialDate={queries.date} key={queries.date} />
+
 			<div css={curiosityStyles.imageGrid}>
 				{imageList.map((photo) => (
 					<img
 						src={photo.img_src}
-						css={{
-							width: "100%",
-						}}
+						css={imgStyle}
 						key={photo.id}
 						alt="Taken by Curiosity Rover on Mars"
 					/>
 				))}
 			</div>
+
 			<Pagination currentPage={queries.page} setPage={setPage} />
 		</div>
 	)
 }
+
+const imgStyle = css({
+	width: "100%",
+})
 
 export default ImagesPage

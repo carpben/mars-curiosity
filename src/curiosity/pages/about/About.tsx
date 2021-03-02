@@ -7,7 +7,7 @@ import H1 from "../../components/H1"
 import { curiosityInfParagraphs } from "../../tools/curiosityInfo"
 import { CuriosityPage } from "../../tools/CuriosityPage"
 import { Photo } from "../../tools/types"
-import aboutImage from "./imageAbout"
+import aboutImage from "./aboutImage"
 import Carousel from "./Carousel"
 
 interface Props {
@@ -28,11 +28,7 @@ const About: DRFC<Props> = (props) => {
 			>
 				{aboutImage}
 
-				<div
-					css={{
-						flex: 11,
-					}}
-				>
+				<div css={styleContent}>
 					{curiosityInfParagraphs.map((p) => (
 						<p css={styleParagraph}>{p}</p>
 					))}
@@ -53,7 +49,6 @@ const About: DRFC<Props> = (props) => {
 }
 
 const styleParagraph = css({
-	// fontSize: 18,
 	lineHeight: 1.25,
 	marginTop: 0,
 	fontWeight: 500,
@@ -62,6 +57,10 @@ const styleParagraph = css({
 
 const styleButtonsW = css({
 	marginTop: 35,
+})
+
+const styleContent = css({
+	flex: 11,
 })
 
 export default About

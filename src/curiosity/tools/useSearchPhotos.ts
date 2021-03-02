@@ -23,7 +23,7 @@ const initState: ImagesState = {
 	loading: true,
 	queries: {
 		page: 1,
-		date: format(subDays(new Date(), 2), DATE_FORMAT),
+		date: format(subDays(new Date(), 3), DATE_FORMAT),
 	},
 }
 

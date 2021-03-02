@@ -1,7 +1,5 @@
 /** now: SOL 200 */
 
-import { format } from "date-fns"
-import { range } from "lodash"
 import { getArr } from "./general/utils/array"
 import { getRandomInRange } from "./general/utils/numbers"
 
@@ -33,7 +31,7 @@ const getWeatherStat = (sol: number, min: number, cycle: number, range: number):
 
 const sol200 = new Date()
 
-const getDateForSol = (sol: number) => sol200.toISOString()
+const getDateForSol = () => sol200.toISOString()
 
 const getDataForSol = (i: number): SolWeatherData => {
 	const sol = i + 1
@@ -41,15 +39,13 @@ const getDataForSol = (i: number): SolWeatherData => {
 		AT: getWeatherStat(sol, -100, 100, 80),
 		HWS: getWeatherStat(sol, 0.15, 10, 17),
 		PRE: getWeatherStat(sol, 722, 40, 40),
-		First_UTC: getDateForSol(0),
-		Last_UTC: getDateForSol(0),
+		First_UTC: getDateForSol(),
+		Last_UTC: getDateForSol(),
 		sol,
 	}
 }
 
 const weatherData = getArr(200, (i) => getDataForSol(i))
-
-console.log(weatherData)
 
 export interface WeatherQueries {
 	sort: WEATHER_METRIC
