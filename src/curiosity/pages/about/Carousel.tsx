@@ -35,6 +35,8 @@ const Carousel: DRFC = () => {
 
 	return (
 		<>
+			<div>Curiosity Rover Images from today</div>
+
 			{imageList != undefined && (
 				<>
 					<div

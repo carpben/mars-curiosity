@@ -16,6 +16,7 @@ const CuriosityButton: DRFC<Props> = (props) => {
 				backgroundColor: "#ded6c9",
 				padding: 20,
 				borderRadius: 12,
+				fontWeight: 500,
 				":hover, :focus": {
 					backgroundColor: "#bbb",
 				},
