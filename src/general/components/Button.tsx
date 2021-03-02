@@ -13,4 +13,4 @@ export const Button: DRFC<Props> = (props) => {
 	return <button onClick={handler} css={[style, stl]} {...otherProps} />
 }
 
-const style = css(styleInputNormalize, { cursor: "pointer" })
+const style = css(styleInputNormalize, { cursor: "pointer", fontSize: 16 })

@@ -23,19 +23,8 @@ const CuriosityMars: DRFC = (props) => {
 	}
 
 	return (
-		<div
-			css={{
-				maxWidth: 1100,
-				margin: "auto",
-				marginTop: verticleMargin,
-				marginBottom: verticleMargin,
-			}}
-		>
-			<div
-				css={{
-					display: "flex",
-				}}
-			>
+		<div css={styleContainer}>
+			<div css={styleNavigation}>
 				{pages.map((page) => (
 					<Button
 						handler={() => setPage(page)}
@@ -55,5 +44,16 @@ const CuriosityMars: DRFC = (props) => {
 }
 
 const verticleMargin = 20
+
+const styleContainer = css({
+	maxWidth: 1200,
+	margin: "auto",
+	marginTop: verticleMargin,
+	marginBottom: verticleMargin,
+})
+
+const styleNavigation = css({
+	display: "flex",
+})
 
 export default CuriosityMars
